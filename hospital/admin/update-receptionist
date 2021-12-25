@@ -1,0 +1,97 @@
+<?php include('partials/menu.php'); ?>
+  <div class="main-content">
+        <div class="wrapper">
+            <h1>Update Receptionists</h1>
+            <br><br>
+              <?php
+                 
+                 //check wheather id is set or not
+                 if(isset($_GET['id']))
+                 {
+                     //get id and all details
+                     //echo "Getting the data";
+                     $id=$_GET['id'];
+                     //Create SQL query to get all other details 
+                     $sql = "SELECT * FROM add_receptionist WHERE id=$id";
+                     //execute the query
+
+                     $res=mysqli_query($conn,$sql);
+                     //count the rows to check wheather the id is valid or not
+                     $count = mysqli_num_rows($res);
+                     if($count==1)
+                     {
+                         //Get all the data
+                         $row = mysqli_fetch_assoc($res);
+                         $username = $row['username'];
+                         $email = $row['email'];
+                         $mobile = $row['mobile'];
+                         $active = $row['active'];
+
+
+
+                     }
+                     else 
+                     {
+                         //redirect to appoint receptionist page with session message
+                         $_SESSION['no-receptionist-found']="<div class='error'>Receptionist not found</div>";
+                         header('location:'.SITEURL.'admin/appoint-receptionist.php');
+                     }
+
+
+
+                 }
+                 else{
+                     //redirect to appoint receptionist page
+                     $_SESSION['unauthorize']="<div class='error'>Unauthorize Access</div>";
+                     header('location:'.SITEURL.'admin/appoint-receptionist.php');
+                 }
+
+              ?>
+                    <form action="" method="POST" enctype="multipart/form-data">
+
+                            <table class="tbl-30">
+                                <tr>
+                                        
+                                    <td>
+                                        <input type="text" class="d_update" name="username" placeholder="Username" value="<?php echo $username; ?>">
+                                    </td>
+                                </tr>
+                
+                                <tr>
+                            
+                                    <td>
+                                        <input type="email" class="d_update" name="email" placeholder="Email" value="<?php echo $email; ?>">
+                                    </td>
+                                </tr>
+                               
+                                <tr>
+                                    
+                                    <td>
+                                        <input type="text" class="d_update" name="mobile" placeholder="Mobile" value="<?php echo $mobile; ?>"><br><br>
+                                    </td>
+                                </tr>
+                               
+                                <tr>
+                                    <td>Active</td>
+                                    <td>
+                                        <input type="radio" name="active" value="Yes">Yes
+                                        <input type="radio" name="active" value="No">No
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="submit" name="submit" value="Update Receptionist" class="btn-secondary">
+                                     </td>
+                                </tr>
+
+
+                            </table>
+                    </form>
+
+
+        </div>
+
+  </div>
+
+<?php include('partials/footer.php');?>
+

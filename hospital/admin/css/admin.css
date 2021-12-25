@@ -1,0 +1,285 @@
+*{
+   margin: 0;
+   padding: 0;
+   font-family: Arial, Helvetica, sans-serif; 
+}
+h1{
+    width: 100%;
+    height: 25px;
+    font-size: 120%;
+    background-color: #6c5ce7;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    animation-name: example;
+    animation-duration: 4s;
+    text-align: center;
+    border-radius: 10px;
+    text-shadow: whitesmoke;
+    cursor: pointer;
+    padding: 15px 10px;
+    text-transform: uppercase;
+}
+@keyframes example {
+    0%   {background-color: #dfe6e9;}
+    25%  {background-color: #81ecec;}
+    50%  {background-color: #74b9ff;}
+    100% {background-color: #0984e3;}
+  }
+
+.wrapper{
+ 
+    padding: 1%;
+    width: 90%;
+    margin: 0 auto;
+}
+.text-center{
+    text-align: center;
+}
+.clearfix{
+    float: none;
+    clear: both;
+}
+.tbl-full{
+    width: 100%;
+}
+.tbl-30{
+    width: 30%;
+}
+table tr th{
+    border-bottom: 1px solid black;
+    padding: 1%;
+    text-align: center;
+}
+
+.btn-primary{
+    background-color:#54a0ff; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 5px;
+}
+.btn-primary:hover{
+    box-shadow: 0 12px 16px #2e86de;
+    background-color: #2e86de;
+}
+.btn-secondary{
+ background-color: #0be881; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 5px;
+}
+.btn-secondary:hover{
+    box-shadow: 0 12px 16px 0 #05c46b;
+    background-color:#05c46b ;
+}
+.btn-danger{
+    background-color: #ff6b6b; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 5px;
+}
+.btn-danger:hover{
+    box-shadow: 0 12px 16px 0 #ee5253;
+    background-color: #ee5253;
+}
+
+/*message color*/
+.success{
+    color: #05c46b;
+    font-variant: small-caps;
+    font-weight: bolder;
+}
+.error{
+    color: #ff3f34;
+}
+/*css for Navbar menu starts*/
+.menu{
+    border-bottom:1px solid #0984e3;
+}
+.menu ul{
+        list-style-type: none;
+
+}
+.menu ul li{
+    display: inline;
+    padding: 1%;
+}
+.menu ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #3498db;
+}
+.menu ul li a:hover{
+    color: #2980b9;
+}
+
+/*css for Navbar menu ends*/
+
+/*css for main content Start*/
+.main-content{
+    background-color: #f1f2f6;
+    padding: 3% 0;
+}
+.col-4{
+    width: 18%;
+    background-color: white;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+}
+/*css for main content ends*/
+
+
+/* css for footer */
+.footer{
+    background-color: #1e90ff;
+    color: white;
+  
+}
+.footer p a{
+    text-decoration: none;
+    color: #dfe6e9;
+    text-transform: uppercase;
+    text-shadow: black;
+    font-weight: bold;
+    
+}
+.footer p a:hover{
+    color: #b2bec3;
+}
+.login{
+    width: 20%; 
+    border-style:outset;
+    padding: 2%;
+    margin: 10% auto;
+    transition: 0.9s;
+    border-radius: 10px;
+    
+
+}
+.login:hover{
+    width: 25%;
+}
+.user__name,.pass__word{
+    width: 95%;
+    transition: 0.9s;
+    padding: 5px;
+    border-radius: 4px;
+    padding: 10px 18px;
+    border: none;
+}
+.user__name:hover{
+    width: 100%;
+    
+}
+.pass__word:hover{
+    width: 100%;
+
+}
+
+.submit__btn{
+    padding: 10px 18px;
+    font-size: 15px;
+    background: #1a3969;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    color: #f4f4f4;
+    transition: all 0.2s ease;
+}
+.submit__btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+.submit__btn:focus {
+    box-shadow: 0px 0px 0px 3px black;
+}
+.login p{
+    font-family:"Goudy Bookletter 1911", sans-serif;
+}
+
+.login p a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color:#596275;}{
+
+}
+.login p a:hover{
+    color: #303952;
+}
+.username{
+    width: 95%;
+    transition: 0.9s;
+    padding: 5px;
+    border-radius: 4px;
+    padding: 10px 18px;
+    border: none;
+}
+.username:hover{
+    width: 100%;
+}
+.password{
+    width: 95%;
+    transition: 0.9s;
+    padding: 5px;
+    border-radius: 4px;
+    padding: 10px 18px;
+    border: none;
+
+}
+.password:hover{
+    width: 100%;
+}
+.d_input{
+    width: 95%;
+    transition: 0.9s;
+    padding: 5px;
+    border-radius: 4px;
+    padding: 10px 18px;
+    border: none;
+
+}
+.d_input:hover{
+    width: 100%;
+}
+.d_update{
+    width: 120%;
+    transition: 0.9s;
+    padding: 5px;
+    border-radius: 4px;
+    padding: 10px 18px;
+    border: none;
+
+}
+.d_update:hover{
+    width: 140%;
+}
